@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
+import NavbarFlowbite2 from "./Components/Flowbite/NavbarFlowbite2.jsx";
+import PhotoSwipe from "./Components/Flowbite/PhotoSwipe.jsx";
+import Body from "./Pages/Body/index.js";
+import Card2 from "./Components/Flowbite/Card2.jsx";
+import Footer from "./Components/Footer/index.jsx";
+import Home from "./Pages/Home";
+import Contactus from "./Pages/Contact/index.js";
+import Products from "./Pages/Products/index.js";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" exact={true} element={<Home />} />
+        <Route path="/products" exact={true} element={<Products />} />
+        <Route path="/contactus" exact={true} element={<Contactus />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
