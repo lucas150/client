@@ -23,19 +23,22 @@ const Card2 = () => {
       message,
     });
 
-    const res = await fetch("/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        name,
-        products,
-        number,
-        message,
-      }),
-    });
+    const res = await fetch(
+      "https://het-enterprise-server.onrender.com/register",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          name,
+          products,
+          number,
+          message,
+        }),
+      }
+    );
 
     const data = await res.json();
     console.log(data);
