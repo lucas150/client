@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8006",
+  "proxy": "https://het-enterprise-server.onrender.com",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@react-google-maps/api": "^2.19.3",
