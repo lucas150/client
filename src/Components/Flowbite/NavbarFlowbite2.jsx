@@ -8,15 +8,15 @@ const NavbarFlowbite2 = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <div className="">
       <nav className="bg-pure-greys-25 border-gray-200 dark:bg-gray-900">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
           <a
             href="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
+            className="flex items-center space-x-3 rtl:space-x-reverse no-underline text-black font-bolder"
           >
             <img src={logo} className="h-8" alt="Logo" />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="self-center text-2xl font-bold no-underline dark:text-white">
               Het Enterprise
             </span>
           </a>
@@ -24,7 +24,7 @@ const NavbarFlowbite2 = () => {
             <button
               onClick={toggleMenu}
               type="button"
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="no-underline inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="navbar-menu"
               aria-expanded={isOpen}
             >
@@ -52,12 +52,12 @@ const NavbarFlowbite2 = () => {
             }`}
             id="navbar-menu"
           >
-            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+            <ul className="flex flex-col md:p-0 mt-2 font-medium border md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
               <li>
                 <NavLink
                   exact
                   to="/"
-                  className="block py-2 px-3 rounded md:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="no-underline block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 md:dark:hover:text-blue-500"
                   activeClassName="text-blue-700 bg-blue-100 md:text-blue-700 md:bg-transparent"
                 >
                   Home
@@ -66,7 +66,7 @@ const NavbarFlowbite2 = () => {
               <li>
                 <NavLink
                   to="/products"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 md:dark:hover:text-blue-500"
+                  className="no-underline block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 md:dark:hover:text-blue-500"
                   activeClassName="text-blue-700 bg-blue-100 md:text-blue-700 md:bg-transparent"
                 >
                   Products
@@ -75,7 +75,7 @@ const NavbarFlowbite2 = () => {
               <li>
                 <NavLink
                   to="/contactus"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 md:dark:hover:text-blue-500"
+                  className="no-underline block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 md:dark:hover:text-blue-500"
                   activeClassName="text-blue-700 bg-blue-100 md:text-blue-700 md:bg-transparent"
                 >
                   Contact Us
@@ -85,6 +85,67 @@ const NavbarFlowbite2 = () => {
           </div>
         </div>
       </nav>
+      {/* <div>
+        <nav className="bg-pure-greys-25 border-gray-200 dark:bg-gray-900">
+          <div>
+            <a
+              href="/"
+              className="flex items-center space-x-3 rtl:space-x-reverse no-underline text-black font-bolder"
+            >
+              <img src={logo} className="h-8" alt="Logo" />
+              <span className="self-center text-2xl font-bold no-underline dark:text-white">
+                Het Enterprise
+              </span>
+            </a>
+
+            <div className="flex md:order-2">
+              <button
+                onClick={toggleMenu}
+                type="button"
+                className="no-underline inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-menu"
+                aria-expanded={isOpen}
+              >
+                <span className="sr-only">Open main menu</span>
+                <svg
+                  className="w-5 h-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 17 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M1 1h15M1 7h15M1 13h15"
+                  />
+                </svg>
+              </button>
+              <div
+                className={`w-full md:flex md:w-auto transition-transform duration-300 ease-in-out ${
+                  isOpen ? "block" : "hidden"
+                }`}
+                id="navbar-menu"
+              >
+                <ul className="flex flex-col  rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                  <li>
+                    <NavLink
+                      exact
+                      to="/"
+                      className="no-underline block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 md:dark:hover:text-blue-500"
+                      activeClassName="text-blue-700 bg-blue-100 md:text-blue-700 md:bg-transparent"
+                    >
+                      Home
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div> */}
     </div>
   );
 };

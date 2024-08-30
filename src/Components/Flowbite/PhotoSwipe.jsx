@@ -103,7 +103,7 @@ const PhotoSwipe = () => {
     <div>
       <div class="flex items-center justify-center">
         <div class="container w-9/12 ">
-          <div class="flex items-center justify-center flex-wrap whitespace-nowrap py-4">
+          <div class="flex items-center justify-center flex-wrap whitespace-nowrap py-4 ">
             <button
               onClick={() => handleListClick(1)}
               type="button"
