@@ -103,39 +103,39 @@ const PhotoSwipe = () => {
     <div>
       <div class="flex items-center justify-center">
         <div class="container w-9/12 ">
-          <div class="flex items-center justify-center py-4 md:py-8 flex-wrap ">
+          <div class="flex items-center justify-center lg-overflow-x-auto whitespace-nowrap py-4">
             <button
               onClick={() => handleListClick(1)}
               type="button"
-              class="text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800"
+              class="blue-button"
             >
               All categories
             </button>
             <button
               type="button"
               onClick={() => handleListClick(2)}
-              class="text hover:text-white  border-2 border-bluegray-200 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800"
+              class="black-button"
             >
               Anchor Fasteners
             </button>
             <button
               type="button"
               onClick={() => handleListClick(3)}
-              class="text hover:text-white  border-2 border-bluegray-200 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800"
+              class="black-button"
             >
               Self Tapping Screw
             </button>
             <button
               onClick={() => handleListClick(4)}
               type="button"
-              class="text hover:text-white  border-2 border-bluegray-200 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800"
+              class="black-button"
             >
               Self Drilling Screw
             </button>
             <button
               type="button"
               onClick={() => handleListClick(5)}
-              class="text hover:text-white  border-2 border-bluegray-200 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800"
+              class="black-button"
             >
               Wood Screw
             </button>

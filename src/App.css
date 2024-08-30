@@ -16,6 +16,22 @@
   }
 }
 
+/* Assuming you are using Tailwind CSS */
+.blue-button {
+  @apply text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800;
+
+  /* Responsive styles */
+  @apply text-xs lg:text-sm; /* Responsive text sizes */
+  @apply px-1 sm:px-3 lg:px-5 py-1 sm:py-2 lg:py-3; /* Responsive padding */
+}
+
+.black-button {
+  @apply hover:text-white border border-gray-300 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800;
+
+  @apply text-xs lg:text-sm; /* Responsive text sizes */
+  @apply px-1 sm:px-3 lg:px-5 py-1 sm:py-2 lg:py-3; /* Responsive padding */
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
