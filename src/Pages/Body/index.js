@@ -1,9 +1,9 @@
 const Body = () => {
   return (
     <>
-      <div class="flex justify-center text-left pt-5 ">
-        <div class="w-8/12">
-          <p class="flex-start">
+      <div className="flex justify-center text-left pt-5 ">
+        <div className="w-8/12">
+          <p className="flex-start">
             Since 2012, Het Enterprise has been widely recognized for its
             extensive range of high-quality products, including Fasteners,
             Screws, Rivets, and more. Our SS 304 Fasteners collection features a

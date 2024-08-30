@@ -101,41 +101,41 @@ const PhotoSwipe = () => {
 
   return (
     <div>
-      <div class="flex items-center justify-center">
-        <div class="container w-9/12 ">
-          <div class="flex items-center justify-center flex-wrap whitespace-nowrap py-4 ">
+      <div className="flex items-center justify-center">
+        <div className="container w-9/12 ">
+          <div className="flex items-center justify-center flex-wrap whitespace-nowrap py-4 ">
             <button
               onClick={() => handleListClick(1)}
               type="button"
-              class="blue-button"
+              className="blue-button"
             >
               All categories
             </button>
             <button
               type="button"
               onClick={() => handleListClick(2)}
-              class="black-button"
+              className="black-button"
             >
               Anchor Fasteners
             </button>
             <button
               type="button"
               onClick={() => handleListClick(3)}
-              class="black-button"
+              className="black-button"
             >
               Self Tapping Screw
             </button>
             <button
               onClick={() => handleListClick(4)}
               type="button"
-              class="black-button"
+              className="black-button"
             >
               Self Drilling Screw
             </button>
             <button
               type="button"
               onClick={() => handleListClick(5)}
-              class="black-button"
+              className="black-button"
             >
               Wood Screw
             </button>

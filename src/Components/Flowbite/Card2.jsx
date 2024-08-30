@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import Alert from "react-bootstrap/Alert";
 import { FaPhone } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import "bootstrap/dist/css/bootstrap.min.css"; // Ensure Bootstrap styles are imported
+import { Toaster, toast } from "react-hot-toast";
 
 const Card2 = () => {
-  const [show, setShow] = useState(false);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [products, setProducts] = useState("");
@@ -24,42 +23,49 @@ const Card2 = () => {
       message,
     });
 
-    const res = await fetch(
-      "https://het-enterprise-server.onrender.com/register",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          name,
-          products,
-          number,
-          message,
-        }),
+    try {
+      const res = await fetch(
+        "https://het-enterprise-server.onrender.com/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            name,
+            products,
+            number,
+            message,
+          }),
+        }
+      );
+
+      const data = await res.json();
+      console.log(data);
+
+      if (data.status === 401 || !data) {
+        toast.error("Error sending email. Please try again.");
+      } else {
+        toast.success("Your Email was Successfully Sent");
+        // Clear the form fields
+        setEmail("");
+        setName("");
+        setProducts("");
+        setNumber("");
+        setMessage("");
       }
-    );
-
-    const data = await res.json();
-    console.log(data);
-
-    if (data.status === 401 || !data) {
-      console.log("error");
-    } else {
-      setShow(true);
-      setEmail("");
-      console.log("Email sent");
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast.error("Something went wrong. Please try again.");
     }
   };
 
   return (
     <>
-      {show ? (
-        <Alert variant="primary" onClose={() => setShow(false)} dismissible>
-          Your Email was Successfully Sent
-        </Alert>
-      ) : null}
+      {/* Toaster component for rendering toast notifications */}
+      <Toaster position="top-center" reverseOrder={false} />
+
       <div className="w-full p-4 sm:p-6 md:p-8 bg-pure-greys-25 dark:bg-gray-800 dark:border-gray-700">
         <form className="space-y-6" onSubmit={sendEmail}>
           <h5 className="text-2xl font-medium text-gray-900 dark:text-white">

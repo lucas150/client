@@ -3,7 +3,6 @@ import Body from "../Body/index.js";
 import PhotoSwipe from "../../Components/Flowbite/PhotoSwipe.jsx";
 import Card2 from "../../Components/Flowbite/Card2.jsx";
 import Footer from "../../Components/Footer";
-import Mailbox from "../MailBox/mailbox.js";
 
 const Home = () => {
   return (
@@ -12,7 +11,6 @@ const Home = () => {
       <Body />
       <PhotoSwipe />
       <Card2 />
-      {/* <Mailbox /> */}
       <Footer />
     </>
   );
