@@ -85,11 +85,11 @@ const PhotoSwipe = () => {
         console.log(console.error());
     }
     return (
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-5">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-5 rounded">
         {images.map((item) => (
-          <div key={item.id} className=" rounded-lg border-2 text-center ">
+          <div key={item.id} className=" rounded-lg  text-center ">
             <img
-              className=" object-contain w-full h-48"
+              className=" object-contain w-full h-48 bg-white rounded-lg"
               src={item.image}
               alt={item.description}
             />
@@ -100,7 +100,7 @@ const PhotoSwipe = () => {
   };
 
   return (
-    <div>
+    <div className="bg-gray-100">
       <div className="flex items-center justify-center">
         <div className="container w-9/12 ">
           <div className="flex items-center justify-center flex-wrap whitespace-nowrap py-4 ">

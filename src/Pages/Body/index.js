@@ -1,7 +1,7 @@
 const Body = () => {
   return (
     <>
-      <div className="flex justify-center text-left pt-5 ">
+      <div className="flex justify-center text-left pt-2 bg-gray-100 ">
         <div className="w-8/12">
           <p className="flex-start">
             Since 2012, Het Enterprise has been widely recognized for its
